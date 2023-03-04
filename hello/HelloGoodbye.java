@@ -7,12 +7,12 @@
 public class HelloGoodbye {
     public static void main(String[] args) {
         String hello = "Hello";
-        String goodBye = "Goodbye";
+        hello = hello.concat(" ").concat(args[0]).concat(" ").concat("and").concat(" ")
+                     .concat(args[1]).concat(".");
 
-        for (int i = 0; i < args.length; i++) {
-            hello += " " + args[i];
-            goodBye += " " + args[args.length - 1 - i];
-        }
+        String goodBye = "Goodbye";
+        goodBye = goodBye.concat(" ").concat(args[1]).concat(" ").concat("and").concat(" ")
+                         .concat(args[0]).concat(".");
 
         System.out.println(hello);
         System.out.println(goodBye);
